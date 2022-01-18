@@ -1,0 +1,17 @@
+{
+  "name": "btcy-auth-directive",
+  "version": "1.0.1",
+  "description": "BTCY apollo auth directive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Phoenix",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.15.1",
+    "graphql": "^14.1.1",
+    "graphql-tools": "^8.2.0",
+    "lodash": "^4.17.21"
+  }
+}
