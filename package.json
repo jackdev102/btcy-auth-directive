@@ -1,12 +1,20 @@
 {
   "name": "btcy-auth-directive",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "BTCY apollo auth directive",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jack Phoenix",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackdev102/btcy-auth-directive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jackdev102/btcy-auth-directive/issues"
+  },
+  "homepage": "https://github.com/jackdev102/btcy-auth-directive#readme",
+  "author": "luffydjack@gmail.com",
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^2.15.1",

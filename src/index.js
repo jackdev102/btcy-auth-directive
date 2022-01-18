@@ -1,9 +1,11 @@
 const fs = require('fs');
-const auth = require('./auth');
+const authDirective = require('./authDirective');
 
-const AuthDirective = fs.readFileSync(`${__dirname}/authDirective.graphql`, 'utf8').toString();
+const authDirectiveSchema = fs.readFileSync(
+  `${__dirname}/authDirective.graphql`, 'utf8',
+).toString();
 
 module.exports = {
-  auth,
-  AuthDirective,
+  directive: { auth: authDirective },
+  schema: authDirectiveSchema,
 };
