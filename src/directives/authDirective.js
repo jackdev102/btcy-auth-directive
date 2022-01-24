@@ -7,16 +7,14 @@ const {
   GraphQLList,
 } = require('graphql');
 
-const roleMap = require('./roles');
-const groupRoles = require('./groupRoles');
+const { roles, groupRoles } = require('../config');
 
 function convertGroupsToRoles(graphQLGroups = []) {
-  const roles = _.flatMap(graphQLGroups, x => groupRoles[x]);
-  return roles;
+  return _.flatMap(graphQLGroups, x => groupRoles[x]);
 }
 
 function checkFieldPermission(userRole, graphqlRoles = [], graphqlGroups = []) {
-  const graphqlRole = roleMap[userRole];
+  const graphqlRole = roles[userRole];
   const hasPermission = graphqlRoles.includes(graphqlRole) || convertGroupsToRoles(graphqlGroups).includes(userRole);
   return hasPermission;
 }
